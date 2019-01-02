@@ -15,7 +15,7 @@ http://www.mulesoft.org/schema/mule/basic http://www.mulesoft.org/schema/mule/ba
 	              doc:id="91ae4b28-4f31-4b0f-bfff-3bb9a3928460"
 	              responseTimeout="4000"
 	              configId="10"
-	              webHookUrl="" />
+	              webHookUrl="..." />
 
 
 	<flow name="sample-connector-usageFlow" doc:id="c8bab093-92b6-4b13-a76b-c44f2c37c9f8" >
@@ -23,7 +23,7 @@ http://www.mulesoft.org/schema/mule/basic http://www.mulesoft.org/schema/mule/ba
 				doc:name="Send message"
 				doc:id="7e9cc766-9d2b-4e3e-993c-145700962405"
 				config-ref="SlackWebHook_Config"
-				message="foo"/>
+				message="#[attributes.queryParams.msg]"/>
 	</flow>
 
 </mule>
